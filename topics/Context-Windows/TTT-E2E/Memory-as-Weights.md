@@ -78,8 +78,8 @@ The "memory" in Memory-as-Weights is the **difference** between the base model w
 | Concept | Relationship |
 |---------|-------------|
 | [TTT-E2E (Stanford)](./TTT-E2E%20(Stanford).md) | Implements Memory-as-Weights via next-token prediction |
-| [StreamingLLM](../Flash-Attention-Family/StreamingLLM-Attention-Sinks.md) | Alternative: keeps "attention sinks" as permanent KV entries |
-| [PagedAttention (vLLM)](../Flash-Attention-Family/PagedAttention-vLLM.md) | Alternative: manages KV cache memory via paging |
+| [StreamingLLM](../Next-Gen%20Attention%20Mechanisms/StreamingLLM-Attention-Sinks.md) | Alternative: keeps "attention sinks" as permanent KV entries |
+| [PagedAttention (vLLM)](../Next-Gen%20Attention%20Mechanisms/PagedAttention-vLLM.md) | Alternative: manages KV cache memory via paging |
 
 ---
 
