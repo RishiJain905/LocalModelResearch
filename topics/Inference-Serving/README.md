@@ -37,6 +37,13 @@
 | [Automatic-Prefix-Caching-RadixAttention](./Inference-Engines/Automatic-Prefix-Caching-RadixAttention.md) | APC and RadixAttention for KV cache prefix reuse |
 | [Distributed-KV-Cache-Orchestration](./Inference-Engines/Distributed-KV-Cache-Orchestration.md) | llm-d, Mooncake, LMCache, PD disaggregation |
 
+### Research & Power-User Toolkits
+
+| Topic | Description |
+|-------|-------------|
+| [text-generation-webui](./Inference-Engines/text-generation-webui.md) | Gradio UI, all backends (EXL2/AWQ/GPTQ/GGUF), native LoRA training, extensions |
+| [LocalAI](./Inference-Engines/LocalAI.md) | Go API-first, 36+ backends, full multimodal (text/image/audio/video), P2P distributed |
+
 ### Hardware Native / Edge Runtimes
 
 | Topic | Description |
