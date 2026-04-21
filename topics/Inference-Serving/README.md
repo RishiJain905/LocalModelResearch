@@ -8,10 +8,18 @@
 
 | Topic | Description |
 |-------|-------------|
-| [Automatic-Prefix-Caching-RadixAttention](./Automatic-Prefix-Caching-RadixAttention/) | APC and RadixAttention for KV cache prefix reuse across requests |
-| [Distributed-KV-Cache-Orchestration](./Distributed-KV-Cache-Orchestration/) | Distributed KV-cache management, PD disaggregation, llm-d, Mooncake |
-| [Sub-Quadratic-Hybrid-Runtimes-SSMs](./Sub-Quadratic-Hybrid-Runtimes-SSMs/) | Mamba, Mamba-2, RWKV, RetNet, hybrid SSM-Transformer architectures |
-| [Kernel-Level-Optimizations-Sparse-MLA](./Kernel-Level-Optimizations-Sparse-MLA/) | DeepSeek MLA (Multi-head Latent Attention), FlashMLA kernels, DSA sparse attention |
+| [Inference-Engines](./Inference-Engines/) | All research docs — APC/RadixAttention, Distributed KV-Cache, SSMs, Sparse MLA |
+
+---
+
+## Inference-Engines Docs
+
+| Topic | Description |
+|-------|-------------|
+| [Automatic-Prefix-Caching-RadixAttention](./Inference-Engines/Automatic-Prefix-Caching-RadixAttention.md) | APC and RadixAttention for KV cache prefix reuse across requests |
+| [Distributed-KV-Cache-Orchestration](./Inference-Engines/Distributed-KV-Cache-Orchestration.md) | Distributed KV-cache management, PD disaggregation, llm-d, Mooncake |
+| [Sub-Quadratic-Hybrid-Runtimes-SSMs](./Inference-Engines/Sub-Quadratic-Hybrid-Runtimes-SSMs.md) | Mamba, Mamba-2, RWKV, RetNet, hybrid SSM-Transformer architectures |
+| [Kernel-Level-Optimizations-Sparse-MLA](./Inference-Engines/Kernel-Level-Optimizations-Sparse-MLA.md) | DeepSeek MLA (Multi-head Latent Attention), FlashMLA kernels, DSA sparse attention |
 
 ---
 
