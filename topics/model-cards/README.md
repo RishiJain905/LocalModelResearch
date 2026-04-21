@@ -16,6 +16,18 @@ Research on automated, machine-readable documentation standards and tooling for 
 
 ---
 
+### [Training Data Lineage & Provenance](./Training-Data-Lineage-Provenance/)
+
+Research on how AI training data is documented, traced, licensed, and audited — covering dataset composition, copyright disclosures, and contamination reporting.
+
+| Subtopic | Description |
+|----------|-------------|
+| [Dataset Composition Analysis](./Training-Data-Lineage-Provenance/Dataset-Composition-Analysis.md) | Dataset documentation frameworks, provenance tracking, and composition transparency |
+| [Copyright & Public Domain Disclosures](./Training-Data-Lineage-Provenance/Copyright-Public-Domain-Disclosures.md) | Training data licensing, copyright law, fair use, and rights disclosures |
+| [Data Contamination Reporting](./Training-Data-Lineage-Provenance/Data-Contamination-Reporting.md) | Benchmark contamination detection, test set leakage, and model evaluation integrity |
+
+---
+
 ## Overview
 
 **Model Cards** originated from Google's 2019 FAT* paper — short documents accompanying trained ML models that provide structured evaluation across demographic/functional subgroups:
