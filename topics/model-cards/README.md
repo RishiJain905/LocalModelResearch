@@ -28,6 +28,18 @@ Research on how AI training data is documented, traced, licensed, and audited �
 
 ---
 
+### [Agentic Utility Analysis](./Agentic-Utility-Analysis/)
+
+Research on benchmarking and evaluating LLM agents in real-world utility tasks — covering multi-file code reasoning, tool-use reliability, and cross-SDK compatibility.
+
+| Subtopic | Description |
+|----------|-------------|
+| [Multi-File Reasoning Scores](./Agentic-Utility-Analysis/Multi-File-Reasoning-Scores.md) | SWE-bench, SWE-bench Pro, Multi-SWE-bench — benchmarks for repository-level issue resolution |
+| [Tool-Use Reliability (TUR)](./Agentic-Utility-Analysis/Tool-Use-Reliability.md) | BFCL, ToolBench, ToolSandbox, AgentBoard — frameworks for measuring correct tool selection and invocation |
+| [Agent SDK Compatibility](./Agentic-Utility-Analysis/Agent-SDK-Compatibility.md) | MCP, A2A, AGNTCY, BFCL — protocols and benchmarks for cross-framework agent interoperability |
+
+---
+
 ### [Reasoning](./Reasoning/)
 
 Research on how frontier LLMs reason — covering computational overhead of Chain-of-Thought, hidden internal reasoning processes, and frontier benchmarks measuring reasoning capability.
