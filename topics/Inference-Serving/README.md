@@ -37,6 +37,14 @@
 | [Automatic-Prefix-Caching-RadixAttention](./Inference-Engines/Automatic-Prefix-Caching-RadixAttention.md) | APC and RadixAttention for KV cache prefix reuse |
 | [Distributed-KV-Cache-Orchestration](./Inference-Engines/Distributed-KV-Cache-Orchestration.md) | llm-d, Mooncake, LMCache, PD disaggregation |
 
+### Hardware Native / Edge Runtimes
+
+| Topic | Description |
+|-------|-------------|
+| [MLX](./Inference-Engines/MLX.md) | Apple Silicon unified memory, Metal backend, M5 Neural Accelerators, mlx-lm |
+| [NPU-Native-Runtimes](./Inference-Engines/NPU-Native-Runtimes.md) | OpenVINO (Intel NPU), Qualcomm Hexagon QNN, edge NPU benchmarks |
+| [Transformers.js](./Inference-Engines/Transformers.js.md) | Browser/WebGPU/WASM LLM, ONNX-based, v4 C++ runtime, privacy-first |
+
 ### Local Abstraction & Management Layers
 
 | Topic | Description |
