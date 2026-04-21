@@ -14,50 +14,53 @@
 
 ## Inference-Engines Docs
 
+### High Throughput / Concurrency (Throughput-First)
+
 | Topic | Description |
 |-------|-------------|
-| [llama.cpp-GGUF](./Inference-Engines/llama.cpp-GGUF.md) | Plain C/C++ inference, GGUF format, Q4_K_M/Q5_K_M quantization, imatrix calibration |
-| [ExLlamaV2-EXL2](./Inference-Engines/ExLlamaV2-EXL2.md) | EXL2 mixed-precision quantization, 40-70% faster than llama.cpp, tensor parallelism |
-| [MLC-LLM](./Inference-Engines/MLC-LLM.md) | Compilation-based inference via Apache TVM, WebGPU/WASM/iOS/Android, dynamic shapes |
+| [vLLM](./Inference-Engines/vLLM.md) | PagedAttention, continuous batching, v1 re-architecture, 4,742 tok/s @ 100 concurrency |
+| [SGLang](./Inference-Engines/SGLang.md) | RadixAttention, 6.4× throughput, HiCache, 3,109 tok/s @ 50 concurrency |
+| [TensorRT-LLM](./Inference-Engines/TensorRT-LLM.md) | NVIDIA Inflight Batching, FP8/FP4, Blackwell optimization, best single-request throughput |
+
+### Kernel-First Backends
+
+| Topic | Description |
+|-------|-------------|
+| [llama.cpp-GGUF](./Inference-Engines/llama.cpp-GGUF.md) | Plain C/C++, GGUF format, Q4_K_M/Q5_K_M, imatrix, 10 backends, zero dependencies |
+| [ExLlamaV2-EXL2](./Inference-Engines/ExLlamaV2-EXL2.md) | EXL2 mixed-precision (2-8 fractional bpw), 40-70% faster than llama.cpp, tensor parallelism |
+| [MLC-LLM](./Inference-Engines/MLC-LLM.md) | TVM compilation, WebGPU/WASM/iOS/Android/Metal, dynamic shapes, 3× faster on embedded |
+
+### KV Cache & Orchestration
+
+| Topic | Description |
+|-------|-------------|
 | [Automatic-Prefix-Caching-RadixAttention](./Inference-Engines/Automatic-Prefix-Caching-RadixAttention.md) | APC and RadixAttention for KV cache prefix reuse |
 | [Distributed-KV-Cache-Orchestration](./Inference-Engines/Distributed-KV-Cache-Orchestration.md) | llm-d, Mooncake, LMCache, PD disaggregation |
+
+### Sub-Quadratic Runtimes
+
+| Topic | Description |
+|-------|-------------|
 | [Sub-Quadratic-Hybrid-Runtimes-SSMs](./Inference-Engines/Sub-Quadratic-Hybrid-Runtimes-SSMs.md) | Mamba, RWKV, RetNet, xLSTM, hybrid SSM-Transformer |
 | [Kernel-Level-Optimizations-Sparse-MLA](./Inference-Engines/Kernel-Level-Optimizations-Sparse-MLA.md) | DeepSeek MLA (57× KV compression), FlashMLA, DSA sparse attention |
 
 ---
 
-## Key Themes
+## Quick Reference: Throughput Engines
 
-- **Kernel-First Backends** — llama.cpp (GGUF, widest hardware), ExLlamaV2 (EXL2, best quality/speed on consumer NVIDIA), MLC LLM (TVM compilation, cross-platform)
-- **KV Cache Optimization** — Prefix caching (APC/RadixAttention), distributed orchestration (llm-d, Mooncake, LMCache), tiered memory
-- **Sub-Quadratic Runtimes** — SSMs (Mamba family), linear recurrent models (RWKV, RetNet, xLSTM), hybrid architectures
-- **Kernel Optimizations** — MLA low-rank compression, FlashMLA CUDA kernels, sparse attention (DSA/NSA)
-- **Disaggregation** — Prefill/decode disaggregation (DistServe, TetriInfer, vLLM disagg), RDMA transfer
-
----
+| Engine | Best For | Throughput @ 100 | Single-User Speed |
+|--------|----------|------------------|-------------------|
+| **vLLM** | High concurrency, data center | **4,742 tok/s** | Fast TTFT |
+| **SGLang** | Moderate concurrency, few-shot | 3,222 tok/s | Good |
+| **TensorRT-LLM** | Single-request, Blackwell | 1,943 tok/s | **Fastest per-request** |
 
 ## Quick Reference: Kernel-First Backends
 
-| Engine | Format | Best For | Multi-GPU | Key Advantage |
-|--------|--------|----------|-----------|---------------|
-| **llama.cpp** | GGUF | Edge, CPU offload, Mac/Windows, portability | ❌ | Zero dependencies, widest hardware |
-| **ExLlamaV2** | EXL2 | Consumer NVIDIA, max speed | ✅ | 40-70% faster than llama.cpp, per-layer measurement |
-| **MLC LLM** | TVM-compiled | WebGPU, WASM, iOS, Android, Metal | ✅ | Compilation optimization, dynamic shapes |
-| **vLLM** | AWQ/GPTQ/FP8 | Data center, high concurrency | ✅ | PagedAttention, 35× throughput vs single-user |
-
----
-
-## Quick Reference: KV Cache & Orchestration
-
-| System | Type | KV Cache Approach | Throughput Gain |
-|--------|------|------------------|----------------|
-| **vLLM + APC** | Serving | Hash-based block caching | 5-6× vs naive |
-| **SGLang + RadixAttention** | Serving | Token-level radix tree | 6.4× vs vLLM |
-| **llm-d** | Orchestration | Kubernetes-native KV-aware routing | Production scale |
-| **Mooncake** | Production | KVCache-centric disaggregation | 525% vs coupled |
-| **DeepSeek MLA** | Kernel | Low-rank KV compression | 57× vs MHA |
-| **DSA (DeepSeek V3.2)** | Sparse | Lightning indexer top-k | 2× at 128K ctx |
-| **FlashMLA** | Kernels | Optimized CUDA | 3000 GB/s |
+| Engine | Format | Best For | Multi-GPU |
+|--------|--------|----------|-----------|
+| **llama.cpp** | GGUF | Edge, CPU offload, Mac/Windows | ❌ |
+| **ExLlamaV2** | EXL2 | Consumer NVIDIA, max speed | ✅ |
+| **MLC LLM** | TVM-compiled | WebGPU, WASM, iOS, Android | ✅ |
 
 ---
 
