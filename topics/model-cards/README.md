@@ -28,6 +28,18 @@ Research on how AI training data is documented, traced, licensed, and audited �
 
 ---
 
+### [Reasoning](./Reasoning/)
+
+Research on how frontier LLMs reason — covering computational overhead of Chain-of-Thought, hidden internal reasoning processes, and frontier benchmarks measuring reasoning capability.
+
+| Subtopic | Description |
+|----------|-------------|
+| [Compute-to-Reasoning Ratio](./Reasoning/Compute-to-Reasoning-Ratio.md) | Token overhead and efficiency trade-offs for Chain-of-Thought reasoning |
+| [Internal Chain-of-Thought (iCoT)](./Reasoning/Internal-Chain-of-Thought.md) | Hidden reasoning processes, latent continuous thought, and model transparency |
+| [Benchmarks: HLE & MathArena](./Reasoning/Benchmarks-HLE-MathArena.md) | Frontier reasoning benchmarks, leaderboards, and saturation analysis |
+
+---
+
 ## Overview
 
 **Model Cards** originated from Google's 2019 FAT* paper — short documents accompanying trained ML models that provide structured evaluation across demographic/functional subgroups:
