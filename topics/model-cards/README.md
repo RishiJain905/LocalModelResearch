@@ -52,6 +52,18 @@ Research on how frontier LLMs reason — covering computational overhead of Chai
 
 ---
 
+### [Licensing & Open Source Taxonomy](./Licensing-Open-Source-Taxonomy/)
+
+Research on AI/LLM licensing — what "open source" means for models, commercial thresholds in major licenses, and how licensing applies to model components.
+
+| Subtopic | Description |
+|----------|-------------|
+| [OSI-Compliant vs Open-Weights](./Licensing-Open-Source-Taxonomy/OSI-Compliant-vs-Open-Weights.md) | OSAID 1.0, four freedoms, why Llama is not open source, and the full openness taxonomy |
+| [Commercial Thresholds](./Licensing-Open-Source-Taxonomy/Commercial-Thresholds.md) | Revenue caps, MAU thresholds, and field-of-use restrictions across major model licenses |
+| [Sub-File Licensing](./Licensing-Open-Source-Taxonomy/Sub-File-Component-Licensing.md) | Component-level licensing, metadata standards (SafeTensors/GGUF/ONNX), and derivative works |
+
+---
+
 ## Overview
 
 **Model Cards** originated from Google's 2019 FAT* paper — short documents accompanying trained ML models that provide structured evaluation across demographic/functional subgroups:
