@@ -37,6 +37,13 @@
 | [Automatic-Prefix-Caching-RadixAttention](./Inference-Engines/Automatic-Prefix-Caching-RadixAttention.md) | APC and RadixAttention for KV cache prefix reuse |
 | [Distributed-KV-Cache-Orchestration](./Inference-Engines/Distributed-KV-Cache-Orchestration.md) | llm-d, Mooncake, LMCache, PD disaggregation |
 
+### Local Abstraction & Management Layers
+
+| Topic | Description |
+|-------|-------------|
+| [Ollama](./Inference-Engines/Ollama.md) | Go/llama.cpp wrapper, zero-config CLI, OpenAI-compatible API, auto hardware detection |
+| [LMStudio](./Inference-Engines/LMStudio.md) | Desktop GUI + CLI, EXL2/GGUF/MLX, in-app HF search, llmster headless deploy |
+
 ### Sub-Quadratic Runtimes
 
 | Topic | Description |
