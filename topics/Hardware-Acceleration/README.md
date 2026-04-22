@@ -10,4 +10,16 @@ This folder covers hardware acceleration technologies for AI/ML workloads — in
 
 ## Subtopics
 
-> Subtopics coming soon — research in progress.
+| Folder | Description |
+|--------|-------------|
+| [Nvidia-Blackwell-FP4/](./Nvidia-Blackwell-FP4/) | NVIDIA Blackwell architecture with native FP4 Tensor Cores, HBM3e memory, and DGX Spark |
+
+---
+
+## Nvidia-Blackwell-FP4 Subtopics
+
+| Document | Description |
+|----------|-------------|
+| [FP4-Tensor-Cores](./Nvidia-Blackwell-FP4/FP4-Tensor-Cores.md) | NVFP4 format, 18,000 FP4 TOPS, near-lossless quantization |
+| [CG-HBM](./Nvidia-Blackwell-FP4/CG-HBM.md) | 8 TB/s HBM3e memory, CoWoS-L packaging |
+| [DGX-Spark](./Nvidia-Blackwell-FP4/DGX-Spark.md) | Personal AI supercomputer, $4,699, GB10 chip |
