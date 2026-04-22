@@ -35,6 +35,9 @@ This folder covers hardware acceleration technologies for AI/ML workloads — in
 | [Intel-Panther-Lake](./Heterogenous-NPU-GPU/Intel-Panther-Lake.md) | Core Ultra Series 3, Intel 18A, NPU 5, Xe3 GPU, 180 TOPS |
 | [Snapdragon-X2](./Heterogenous-NPU-GPU/Snapdragon-X2.md) | Hexagon NPU 6, 80 TOPS, Oryon CPU, Adreno X2 |
 | [OpenVINO](./Heterogenous-NPU-GPU/OpenVINO.md) | Heterogeneous inference framework, HETERO plugin |
+| [HBM4](./Heterogenous-NPU-GPU/HBM4.md) | JEDEC JESD270-4, 2TB/s+ bandwidth, 2048-bit interface |
+| [CXL-3.0-Memory-Pooling](./Heterogenous-NPU-GPU/CXL-3.0-Memory-Pooling.md) | PCIe 6.0, 64GT/s, memory pooling, KV cache acceleration |
+| [LPDDR5X](./Heterogenous-NPU-GPU/LPDDR5X.md) | JESD209-5B/C, 10.7Gbps, 25% power efficiency gain |
 
 ---
 
