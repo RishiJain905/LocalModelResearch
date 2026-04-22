@@ -1,25 +1,21 @@
 # API-Servers
 
-> Protocols, frameworks, and infrastructure for serving, connecting, and exposing LLM capabilities via standardized API interfaces.
+## 📌 Overview
 
-## Overview
-
-This folder covers protocols and frameworks for LLM API servers, including MCP (Model Context Protocol), inference engines, and related connection standards that enable LLMs to interact with external tools, data, and services.
+API-Servers covers protocols, frameworks, and tooling for building and serving APIs — from low-level interface specs (ASGI) to data validation layers (Pydantic) to full-featured frameworks (FastAPI) and integration protocols (MCP).
 
 ---
 
-## Subtopics
+## Subfolders
 
 | Folder | Description |
 |--------|-------------|
-| [MCP-Protocol/](./MCP-Protocol/) | Model Context Protocol — open standard for connecting LLMs to tools, data, and services |
+| [Async-Frameworks](./Async-Frameworks/) | FastAPI, Pydantic V3, ASGI-Native — async web stack |
+| [MCP-Protocol](./MCP-Protocol/) | Model Context Protocol — AI tool and tool-discovery standard |
 
 ---
 
-## MCP-Protocol Subtopics
+## Summary
 
-| Document | Description |
-|----------|-------------|
-| [FastMCP](./MCP-Protocol/FastMCP.md) | Python framework for building MCP servers (1M+ PyPI downloads/day) |
-| [Standard-Connectors](./MCP-Protocol/Standard-Connectors.md) | Official transports (stdio, Streamable HTTP), SDKs, company servers |
-| [Tool-Discovery](./MCP-Protocol/Tool-Discovery.md) | How tools are discovered in MCP — protocol, registry, web discovery |
+- **Async-Frameworks** — the modern Python async web stack: FastAPI (97.2k stars), Pydantic V3 (Rust-core validation), ASGI v3.0 (async server spec)
+- **MCP-Protocol** — Model Context Protocol for AI agent tool integration
