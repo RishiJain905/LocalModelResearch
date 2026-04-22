@@ -15,6 +15,18 @@ This folder covers hardware acceleration technologies for AI/ML workloads — in
 | [Nvidia-Blackwell-FP4/](./Nvidia-Blackwell-FP4/) | NVIDIA Blackwell architecture with native FP4 Tensor Cores, HBM3e memory |
 | [Apple-M5-Fusion/](./Apple-M5-Fusion/) | Apple M5 Neural Accelerators, Fusion Architecture, MLX framework |
 | [Heterogenous-NPU-GPU/](./Heterogenous-NPU-GPU/) | Intel Panther Lake, Snapdragon X2, OpenVINO — heterogeneous NPU+GPU compute |
+| [Misc/](./Misc/) | Vendor software stacks, workload-specific acceleration, consumer vs datacenter GPUs, GEMM kernel optimization |
+
+---
+
+## Misc Subtopics
+
+| Document | Description |
+|----------|-------------|
+| [Vendor-Software-Stacks](./Misc/Vendor-Software-Stacks.md) | NVIDIA (CUDA/TensorRT/Triton), AMD (ROCm), Intel (oneAPI/OpenVINO), Qualcomm (AI Hub), Apple (CoreML/MLX), Google (JAX/XLA) |
+| [Workload-Specific-Acceleration](./Misc/Workload-Specific-Acceleration.md) | Vision (DALI), Speech (Whisper.cpp), Recommendations (Merlin), LLMs (vLLM/llama.cpp/TRT-LLM), RAG (FAISS/Milvus), Medical (MONAI/Clara) |
+| [Consumer-vs-Datacenter-GPU](./Misc/Consumer-vs-Datacenter-GPU.md) | RTX 4090 vs H100/A100/MI300X — memory bandwidth, VRAM, FP8, NVLink, cloud pricing |
+| [GEMM-MatMul-Kernel-Optimization](./Misc/GEMM-MatMul-Kernel-Optimization.md) | CUDA CUTLASS, AMD hipBLASLt, Intel AMX, Apple MLX, FlashAttention, kernel fusion |
 
 ---
 
