@@ -22,6 +22,9 @@ Key themes:
 | [Intel-Panther-Lake.md](./Intel-Panther-Lake.md) | Core Ultra Series 3, Intel 18A, RibbonFET, NPU 5, Xe3 GPU, 180 TOPS |
 | [Snapdragon-X2.md](./Snapdragon-X2.md) | Hexagon NPU 6, 80 TOPS, Oryon CPU, Adreno X2, Windows Copilot+ |
 | [OpenVINO.md](./OpenVINO.md) | Heterogeneous inference framework, HETERO plugin, CPU/GPU/NPU |
+| [HBM4.md](./HBM4.md) | JEDEC JESD270-4, 2TB/s+ bandwidth, 2048-bit interface, Samsung/Micron/SK Hynix |
+| [CXL-3.0-Memory-Pooling.md](./CXL-3.0-Memory-Pooling.md) | PCIe 6.0, 64GT/s, memory pooling, 4,096 fabric nodes, KV cache acceleration |
+| [LPDDR5X.md](./LPDDR5X.md) | JESD209-5B/C, 10.7Gbps, 25% power efficiency gain, on-device AI memory |
 
 ---
 
@@ -72,6 +75,55 @@ Key themes:
 
 > *"Heterogeneous Execution enables running inference of one model across multiple devices simultaneously."*
 > — docs.openvino.ai
+
+---
+
+## HBM4 — Key Data Points
+
+| Metric | Value |
+|--------|-------|
+| **JEDEC Standard** | JESD270-4 (finalized April 2025) |
+| **Interface Width** | 2,048-bit (2× HBM3E) |
+| **Bandwidth/Stack** | 2.0–3.3 TB/s |
+| **Channels/Stack** | 32 (2× HBM3E) |
+| **Max Capacity** | 64 GB per stack |
+| **Data Rate** | 8–13 Gbps |
+| **AI Training vs HBM3E** | 40–70% faster |
+
+> *"HGM4" was not found as a recognized standard — interpreted as HBM4.*
+
+---
+
+## CXL 3.0 Memory Pooling — Key Data Points
+
+| Metric | Value |
+|--------|-------|
+| **Base Standard** | PCIe 6.0 |
+| **Lane Speed** | 64 GT/s |
+| **Bandwidth (x16)** | 256 GB/s |
+| **Latency** | Zero added vs CXL 2.0 |
+| **Max Fabric Nodes** | 4,096 |
+| **LLM Inference Gain** | 21.9× KV cache throughput vs baseline |
+| **RDMA Speedup** | 3.8× vs 200G RDMA |
+
+> *"CXL Memory pool is the critically missing component in the systems for AI workloads."*
+> — CXL Consortium
+
+---
+
+## LPDDR5X — Key Data Points
+
+| Metric | Value |
+|--------|-------|
+| **JEDEC Standard** | JESD209-5B/C |
+| **Max Data Rate** | 10.7 Gbps |
+| **Bandwidth (x64)** | ~68–85.6 GB/s |
+| **Power Efficiency** | ~25% better vs LPDDR5 |
+| **Apple M5 Bandwidth** | 153 GB/s (M5), 307 GB/s (M5 Pro), 614 GB/s (M5 Max) |
+| **AI Decode Gain** | >9% per speed grade increment |
+
+> *"LPDDR5X is transcending mobile devices — expanding into PCs, accelerators, servers, and automobiles."*
+> — Samsung Semiconductor
 
 ---
 
