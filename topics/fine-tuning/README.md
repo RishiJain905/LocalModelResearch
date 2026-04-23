@@ -13,6 +13,7 @@ Techniques, frameworks, and methodologies for adapting large language models to 
 | [SSM-Hybrid-Tuning](./SSM-Hybrid-Tuning/) | SSM hybrid tuning: Mamba-3, Jamba, State Optimization |
 | [PEFT-Consumer-VRAM](./PEFT-Consumer-VRAM/) | PEFT on consumer VRAM: LoRA, QLoRA, DoRA, rsLoRA |
 | [Unsloth-AMD-Stack](./Unsloth-AMD-Stack/) | Unsloth on AMD: ROCm 7.x, HIP-SDK, bitsandbytes-amd |
+| [Data-Recipes-AMD](./Data-Recipes-AMD/) | Synthetic data on AMD: SAND pipeline, LuminaSFT, Synthetic-Data-Kit |
 | [Reasoning-r1](./Reasoning-r1/) | Reasoning-r1 post-training techniques: GRPO, RLVR, GIFT, Thinking-CoT |
 | [Unsloth-Optimization](./Unsloth-Optimization/) | Unsloth AI + custom Triton kernels: Unsloth-AI, Custom-Kernels |
 | [Hyperparameter-tuning](./Hyperparameter-tuning/) | rsLoRA, Rank-Alpha Scaling, Paged Optimizers |
