@@ -14,6 +14,7 @@ Techniques, frameworks, and methodologies for adapting large language models to 
 | [PEFT-Consumer-VRAM](./PEFT-Consumer-VRAM/) | PEFT on consumer VRAM: LoRA, QLoRA, DoRA, rsLoRA |
 | [Reasoning-r1](./Reasoning-r1/) | Reasoning-r1 post-training techniques: GRPO, RLVR, GIFT, Thinking-CoT |
 | [Unsloth-Optimization](./Unsloth-Optimization/) | Unsloth AI + custom Triton kernels: Unsloth-AI, Custom-Kernels |
+| [Hyperparameter-tuning](./Hyperparameter-tuning/) | rsLoRA, Rank-Alpha Scaling, Paged Optimizers |
 | [Multimodal-Tuning](./Multimodal-Tuning/) | VLM architectures, projector alignment, vision encoding strategies |
 
 ---
