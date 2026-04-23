@@ -10,9 +10,11 @@ Techniques and architectures for fine-tuning multimodal large language models (M
 
 | File | Topic | Type |
 |------|-------|------|
-| [VLM.md](./VLM.md) | Vision-Language Models | Multimodal architecture taxonomy |
+| [Vision-LoRA.md](./Vision-LoRA.md) | LoRA for vision encoders: VoRA, VFL-LoRA, MokA, PEFT-MLLM |
+| [Projector-Tuning.md](./Projector-Tuning.md) | Projector/connector tuning: LLaVA, Honeybee, ProDiaL, Dense Connector, MoReS, Delta-LLaVA |
 | [Projector-Alignment.md](./Projector-Alignment.md) | Visual Projectors / Modality Connectors | Alignment between vision and language |
 | [Vision-Encoding.md](./Vision-Encoding.md) | Vision Encoding Strategies | CLIP, DINO, ViT, tokenization |
+| [VLM.md](./VLM.md) | Vision-Language Models | Multimodal architecture taxonomy |
 
 ---
 
