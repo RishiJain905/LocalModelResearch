@@ -18,7 +18,7 @@ Techniques, frameworks, and methodologies for adapting large language models to 
 | [Unsloth-Optimization](./Unsloth-Optimization/) | Unsloth AI + custom Triton kernels: Unsloth-AI, Custom-Kernels |
 | [Hyperparameter-tuning](./Hyperparameter-tuning/) | rsLoRA, Rank-Alpha Scaling, Paged Optimizers |
 | [Multimodal-Tuning](./Multimodal-Tuning/) | VLM architectures, projector alignment, vision encoding strategies |
-| [Memory-efficiency-AMD](./Memory-efficiency-AMD/) | HSA_OVERRIDE_GFX_VERSION, RDNA3 consumer GPU optimization |
+| [gfx-hardware-overrides](./gfx-hardware-overrides/) | HSA_OVERRIDE_GFX_VERSION, RDNA3 consumer GPU optimization |
 
 ---
 
