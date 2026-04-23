@@ -19,6 +19,7 @@ Techniques, frameworks, and methodologies for adapting large language models to 
 | [Hyperparameter-tuning](./Hyperparameter-tuning/) | rsLoRA, Rank-Alpha Scaling, Paged Optimizers |
 | [Multimodal-Tuning](./Multimodal-Tuning/) | VLM architectures, projector alignment, vision encoding strategies |
 | [gfx-hardware-overrides](./gfx-hardware-overrides/) | HSA_OVERRIDE_GFX_VERSION, RDNA3 consumer GPU optimization |
+| [Memory-Efficiency-Techniques](./Memory-Efficiency-Techniques/) | xformers-ROCm, Gradient Checkpointing |
 
 ---
 
