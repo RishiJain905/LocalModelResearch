@@ -10,6 +10,7 @@ Techniques, frameworks, and methodologies for adapting large language models to 
 |-------|-------------|
 | [Acceleration-Frameworks](./Acceleration-Frameworks/) | Fine-tuning acceleration frameworks: Unsloth, Axolotl, QAT, FSDP2 |
 | [Modular-MOE-Merging](./Modular-MOE-Merging/) | Modular MoE merging: BAR, Expert Adaption, Router Tuning |
+| [SSM-Hybrid-Tuning](./SSM-Hybrid-Tuning/) | SSM hybrid tuning: Mamba-3, Jamba, State Optimization |
 | [Reasoning-r1](./Reasoning-r1/) | Reasoning-r1 post-training techniques: GRPO, RLVR, GIFT, Thinking-CoT |
 
 ---
