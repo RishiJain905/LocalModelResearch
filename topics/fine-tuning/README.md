@@ -12,6 +12,7 @@ Techniques, frameworks, and methodologies for adapting large language models to 
 | [Modular-MOE-Merging](./Modular-MOE-Merging/) | Modular MoE merging: BAR, Expert Adaption, Router Tuning |
 | [SSM-Hybrid-Tuning](./SSM-Hybrid-Tuning/) | SSM hybrid tuning: Mamba-3, Jamba, State Optimization |
 | [PEFT-Consumer-VRAM](./PEFT-Consumer-VRAM/) | PEFT on consumer VRAM: LoRA, QLoRA, DoRA, rsLoRA |
+| [Unsloth-AMD-Stack](./Unsloth-AMD-Stack/) | Unsloth on AMD: ROCm 7.x, HIP-SDK, bitsandbytes-amd |
 | [Reasoning-r1](./Reasoning-r1/) | Reasoning-r1 post-training techniques: GRPO, RLVR, GIFT, Thinking-CoT |
 | [Unsloth-Optimization](./Unsloth-Optimization/) | Unsloth AI + custom Triton kernels: Unsloth-AI, Custom-Kernels |
 | [Hyperparameter-tuning](./Hyperparameter-tuning/) | rsLoRA, Rank-Alpha Scaling, Paged Optimizers |
