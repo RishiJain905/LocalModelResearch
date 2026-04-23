@@ -9,6 +9,7 @@ Methods, tools, and techniques for curating, filtering, and quality-controlling 
 ## Topics
 
 | [reasoning-Trajectories](./reasoning-Trajectories/) | CoT data, verifiable reasoning, PRMs, process supervision |
+| [Contamination-checks](./Contamination-checks/) | Benchmark-leak detection: Min-K%, CoDeC, Time Travel, watermarking |
 | [quality-filtering](./quality-filtering/) | Semantic scoring, embedding-pruning, SemDeDup, FineWeb-Edu, SCIP, DBP |
 | [Synthetic-flywheels](./Synthetic-flywheels/) | Teacher-student loops, SDG frameworks, model collapse risk |
 
