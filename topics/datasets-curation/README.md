@@ -8,7 +8,7 @@ Methods, tools, and techniques for curating, filtering, and quality-controlling 
 
 ## Topics
 
-*(No subtopics yet — send a research batch to populate)*
+| [Synthetic-flywheels](./Synthetic-flywheels/) | Teacher-student loops, SDG frameworks, model collapse risk |
 
 ---
 
