@@ -9,6 +9,7 @@ Techniques, frameworks, and methodologies for adapting large language models to 
 | Topic | Description |
 |-------|-------------|
 | [Acceleration-Frameworks](./Acceleration-Frameworks/) | Fine-tuning acceleration frameworks: Unsloth, Axolotl, QAT, FSDP2 |
+| [Reasoning-r1](./Reasoning-r1/) | Reasoning-r1 post-training techniques: GRPO, RLVR, GIFT, Thinking-CoT |
 
 ---
 
