@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[Run llama.cpp model] --> B[Load regular GGUF model]
     B --> B1[Example: Q8_0 / Q4_K / Q5_K_M]
@@ -37,3 +38,4 @@ flowchart TD
     M[Important distinction] --> M1[Model quantization != KV cache quantization]
     M --> M2[Q8_0 is the model format]
     M --> M3[turbo3/turbo4 are cache formats]
+```

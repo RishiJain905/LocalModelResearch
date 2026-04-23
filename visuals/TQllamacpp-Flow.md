@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[Goal: Run TurboQuant-related inference on AMD RX 7800 XT] --> B[Research setup]
     B --> C[Understand there are 2 different lanes]
@@ -59,3 +60,4 @@ flowchart TD
     M[Final understanding] --> M1[Backend 1 = regular GGUF models + TurboQuant KV cache]
     M --> M2[Backend 2 = TQ3_1S / TQ3_4S weight-format models]
     M --> M3[Model format and KV cache format are different concepts]
+```

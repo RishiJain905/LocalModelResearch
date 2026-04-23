@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[You have a model file] --> B{What kind of model format is it?}
 
@@ -36,3 +37,4 @@ flowchart TD
 
     J[Simple rule] --> J1[If model name says Q8_0 / Q4_K / Q5_K_M -> Backend 1]
     J --> J2[If model name says TQ3_1S / TQ3_4S -> Backend 2]
+```
