@@ -15,7 +15,8 @@ Methods, tools, and techniques for curating, filtering, and quality-controlling 
 | [Contamination-checks](./Contamination-checks/) | Benchmark-leak detection: Min-K%, CoDeC, Time Travel, watermarking |
 | [quality-filtering](./quality-filtering/) | Semantic scoring, embedding-pruning, SemDeDup, FineWeb-Edu, SCIP, DBP |
 | [Synthetic-flywheels](./Synthetic-flywheels/) | Teacher-student loops, SDG frameworks, model collapse risk |
-| [Verifiable-trajectories](./Verifiable-trajectories/) | RLVR, code execution verification, math gold standards |
+|| [Verifiable-trajectories](./Verifiable-trajectories/) | RLVR, code execution verification, math gold standards |
+|| [Automated-Adaption](./Automated-Adaption/) | AutoAdapt Framework (Microsoft), Budget-Aware Refinement — automated domain adaptation & resource-constrained optimization |
 
 ---
 
