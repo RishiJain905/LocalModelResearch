@@ -8,7 +8,9 @@ Infrastructure, tooling, and systems for training large language models and othe
 
 ## Subtopics
 
-*(No subtopics yet — add via research batches)*
+| Folder | Description |
+|--------|-------------|
+| [fsdp2-vescale](./fsdp2-vescale/) | FSDP2 + veScale: RaggedShard, structure-aware planning, Muon optimizers — 5–66% throughput gains, ~52% FLOPs vs AdamW |
 
 ---
 
