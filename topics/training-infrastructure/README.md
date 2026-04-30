@@ -16,6 +16,7 @@ Infrastructure, tooling, and systems for training large language models and othe
 |--------|-------------|
 | [fsdp2-vescale](./fsdp2-vescale/) | FSDP2 + veScale: RaggedShard, structure-aware planning, Muon optimizers — 5–66% throughput gains, ~52% FLOPs vs AdamW |
 | [Token-Economics](./Token-Economics/) | Cloud vs local TCO, breakeven analysis, and token economics for AI infrastructure: GPU rental vs ownership, utilization thresholds, LCOAI, and billing models |
+| [observability-resilience](./observability-resilience/) | Dynamic routing for training jobs (Headless Services, Istio/Envoy), fault-tolerant logging (Fluent Bit, Loki), and resilience patterns for elastic ML training |
 
 ---
 
@@ -27,4 +28,4 @@ Infrastructure, tooling, and systems for training large language models and othe
 
 ---
 
-*Last updated: 2026-04-26*
+*Last updated: 2026-04-30*
