@@ -18,6 +18,7 @@ Infrastructure, tooling, and systems for training large language models and othe
 | [Token-Economics](./Token-Economics/) | Cloud vs local TCO, breakeven analysis, and token economics for AI infrastructure: GPU rental vs ownership, utilization thresholds, LCOAI, and billing models |
 | [observability-resilience](./observability-resilience/) | Dynamic routing for training jobs (Headless Services, Istio/Envoy), fault-tolerant logging (Fluent Bit, Loki), and resilience patterns for elastic ML training |
 | [Storage-Streaming](./Storage-Streaming/) | Managed Lustre (FSx, GCS, Azure), Model Streamers (SafeTensors, Run:ai, Tensorizer), NVMe-oF (RDMA/TCP, GPUDirect Storage), and storage benchmarks (MLPerf) |
+| [green-ai-thermals](./green-ai-thermals/) | TDP specs (H100/B200/MI300X), DFS/undervolting (GPU Boost 3.0, DVFS), carbon tracking (CodeCarbon, Electricity Maps, Compute Gardener), and green GPU cloud providers |
 
 ---
 
