@@ -61,6 +61,15 @@ Web UIs for LLM interactions provide user-facing interfaces for chatting with la
 - **Tools:** Langfuse, OpenLLMetry, Helicone, OpenTelemetry
 - **Compliance:** GDPR requirements, audit trails, tamper-evidence
 
+### [[multimodal-perception]] — Multimodal Input Patterns
+
+> *Patterns for AI agents to perceive and process multiple sensory inputs: visual, audio, and beyond.*
+
+|| Sub-topic | Focus |
+|-----------|---------|
+|| [[continuous-listening]] | Always-on audio input, VAD, streaming STT, full-duplex communication |
+|| [[screen-perception]] | Screenshot-based UI understanding, computer use agents |
+
 ---
 
 ## Quick Reference
