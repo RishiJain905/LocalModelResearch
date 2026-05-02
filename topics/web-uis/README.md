@@ -1,6 +1,6 @@
 # Web UIs
 
-> *Interface comparison for LLM interactions — self-hosted web UIs, their architectures, features, and logging/observability patterns.*
+> *Interface comparison for LLM interactions — self-hosted web UIs, agentic UX patterns, and logging/observability.*
 
 ## Table of Contents
 
@@ -18,14 +18,22 @@ Web UIs for LLM interactions provide user-facing interfaces for chatting with la
 - **Self-hosting** — data control, privacy, cost savings vs SaaS
 - **Extensibility** — plugins, custom tools, RAG pipelines
 - **Enterprise features** — authentication, RBAC, audit logging
+- **Agentic UX** — autonomy dials, explainable rationale, human-in-the-loop patterns
 - **Observability** — conversation history, token tracking, debugging
-
-> *"The ChatGPT interface—once OpenAI's moat—is now table stakes. Any of these three projects delivers 90% of the ChatGPT experience."*
-> — [Elestio Blog](https://blog.elest.io/the-best-open-source-chatgpt-interfaces-lobechat-vs-open-webui-vs-librechat/)
 
 ---
 
 ## Topics
+
+### [[agentic-ux-patterns]] — Agentic UX Design Patterns
+
+> *Design patterns for trustworthy, controllable, accountable AI agents.*
+
+| Sub-topic | Focus |
+|-----------|-------|
+| [[autonomy-dials]] | User-controlled autonomy levels (Andrej Karpathy, June 2025) |
+| [[explainable-rationale]] | Visible reasoning / Stream of Thought |
+| [[hitl]] | Human-in-the-Loop patterns (approval gates, checkpoint/interrupt) |
 
 ### [[open-webui]] — Ollama-Native Web UI
 
@@ -35,7 +43,6 @@ Web UIs for LLM interactions provide user-facing interfaces for chatting with la
 - **Key Strength:** Best Ollama integration, extensive plugin ecosystem
 - **Stars:** 135k+ GitHub
 - **Enterprise:** RBAC, LDAP, SCIM 2.0 support
-- **Best for:** Developers, self-hosters, Ollama users
 
 ### [[librechat]] — Multi-Provider Gateway
 
@@ -45,74 +52,44 @@ Web UIs for LLM interactions provide user-facing interfaces for chatting with la
 - **Key Strength:** Multi-provider abstraction (OpenAI, Anthropic, Azure, AWS, etc.)
 - **Stars:** 36k+ GitHub
 - **Enterprise:** OAuth2, SAML, LDAP authentication
-- **Best for:** Organizations needing multi-provider flexibility
 
 ### [[architecture-logs]] — Logging & Observability
 
-> *Logging, observability, and audit patterns for LLM web interfaces — conversation history, user interaction logging, analytics, debugging tools, and compliance/audit trails.*
+> *Logging, observability, and audit patterns for LLM web interfaces.*
 
 - **Key Patterns:** Three-layer architecture (Capture→Store→Use), middleware/pipeline pattern
 - **Tools:** Langfuse, OpenLLMetry, Helicone, OpenTelemetry
-- **Storage:** ClickHouse for high-volume, PostgreSQL for structured, Vector DBs for semantic search
 - **Compliance:** GDPR requirements, audit trails, tamper-evidence
 
 ---
 
 ## Quick Reference
 
+### Agentic UX Lifecycle (Smashing Magazine)
+
+| Phase | Patterns |
+|-------|----------|
+| **Pre-Action** | Autonomy Dial, Intent Preview |
+| **In-Action** | Explainable Rationale, Confidence Signal |
+| **Post-Action** | Action Audit & Undo, Escalation Pathway |
+
 ### Decision Matrix
 
 | Need | Best Choice |
 |------|-----------|
+| User controls how much agent can do independently | [[autonomy-dials]] |
+| User wants to understand agent reasoning | [[explainable-rationale]] |
+| High-stakes actions require human approval | [[hitl]] |
 | Simplest Ollama setup | [[open-webui]] |
 | Multi-provider (OpenAI + Anthropic + Azure) | [[librechat]] |
-| Native Ollama integration | [[open-webui]] |
-| Enterprise auth (OAuth2, SAML, LDAP) | [[librechat]] |
-| Extensive plugin ecosystem | [[open-webui]] |
-| Code interpreter (sandboxed) | [[librechat]] |
-| RAG-heavy workflows | [[open-webui]] |
-| LLM observability/logging | [[architecture-logs]] |
 
-### Comparison Table
+### HITL Modes
 
-| Feature | Open WebUI | LibreChat |
-|---------|-----------|-----------|
-| **License** | MIT | MIT |
-| **Architecture** | FastAPI + SvelteKit | Node.js + React |
-| **Ollama Integration** | Native (best) | Via custom endpoints |
-| **Multi-Provider** | Good | Excellent (15+ providers) |
-| **RAG Support** | Advanced (9 vector DBs) | Via LangChain |
-| **Plugin Ecosystem** | Extensive (800+ plugins) | Moderate |
-| **Enterprise Auth** | RBAC, LDAP, SCIM | OAuth2, SAML, LDAP |
-| **Code Interpreter** | Pyodide (browser) | Sandboxed (multi-language) |
-| **GitHub Stars** | 135k+ | 36k+ |
-
-### Observability Stack
-
-```
-┌─────────────────────────────────────────────────────┐
-│              LLM Web UI Application                  │
-└─────────────────────────┬───────────────────────────┘
-                          ▼
-┌─────────────────────────────────────────────────────┐
-│         Instrumentation (SDK / Middleware)            │
-│   Langfuse | OpenLLMetry | Helicone | OpenLIT       │
-└─────────────────────────┬───────────────────────────┘
-                          ▼
-┌─────────────────────────────────────────────────────┐
-│              OpenTelemetry Collector                  │
-└─────────────────────────┬───────────────────────────┘
-                          ▼
-┌─────────────────────────────────────────────────────┐
-│                   Storage Backend                     │
-│  ClickHouse | PostgreSQL | Vector DB | Elasticsearch │
-└─────────────────────────────────────────────────────┘
-```
-
-### Standards
-
-- **OpenTelemetry GenAI Conventions** — `gen_ai.*` attributes for standardized LLM observability
-- **Model Context Protocol (MCP)** — Open standard for AI tool integration
+| Mode | Human Role | When Required |
+|------|-----------|---------------|
+| **HITL** | Approval before action | Irreversible, regulated, financial/medical |
+| **HOTL** | Monitor and override post-hoc | Correctable, moderate stakes |
+| **HOOTL** | None | Low-stakes, retryable |
 
 ---
 
@@ -120,9 +97,9 @@ Web UIs for LLM interactions provide user-facing interfaces for chatting with la
 
 - [Open WebUI Official Docs](https://docs.openwebui.com/)
 - [LibreChat Official Docs](https://www.librechat.ai/docs)
+- [Smashing Magazine: Designing For Agentic AI](https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/)
+- [LangGraph Checkpointing](https://langchain.com/langgraph/)
 - [OpenTelemetry GenAI Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
-- [Langfuse](https://langfuse.com/) — LLM engineering platform
-- [OpenLLMetry](https://github.com/traceloop/openllmetry) — OTel-native observability
 
 ---
 
